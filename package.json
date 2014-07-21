@@ -10,7 +10,8 @@
         "ejs": "0.8.4",
         "optimist": "0.3.4",
         "slug": "0.5.0",
-        "bcrypt": "0.7.8"
+        "bcrypt": "0.7.8",
+        "sails-mongo": "0.9.8"
     },
     "scripts": {
         "start": "node app.js",

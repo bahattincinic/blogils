@@ -15,9 +15,43 @@
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
 
+var bcrypt = require('bcrypt');
+
 module.exports = {
-    
-  
+
+  /**
+   *User Login
+  */
+  login: function(req, res){
+    if(!req.session.user){
+        User.findOneByUsername(req.param('username'), function (err, user) {
+            if(user && !err){
+                var match = bcrypt.compareSync(req.param('password'), user.password);
+                if(match){
+                    req.session.user = user;
+                    res.redirect('/');
+                }else{
+                    res.view('user/login');
+                }
+            }else {
+                res.view('user/login');
+            }
+        });
+    }else{
+        res.redirect('/');
+    }
+  },
+
+
+  /**
+   *User Logout
+  */
+  logout: function(req, res){
+    User.findOne(req.session.user.id, function (err, user) {
+      req.session.user = undefined;
+      res.redirect('/user/login/');
+    });
+  },
 
 
   /**
@@ -26,5 +60,5 @@ module.exports = {
    */
   _config: {}
 
-  
+
 };
