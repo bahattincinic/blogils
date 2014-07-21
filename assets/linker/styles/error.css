@@ -1,0 +1,63 @@
+main {
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    padding: 0;
+}
+
+.error-content {
+    max-width: 530px;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+    height: 100%;
+}
+
+.error-details {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.error-image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 96px;
+    height: 150px;
+}
+
+body {
+    width: 100%;
+    color: #242628;
+    font-weight: 300;
+    background: #edece4;
+}
+
+.error-message {
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.error-code {
+    margin: 0;
+    font-size: 7.8em;
+    line-height: 0.9em;
+    color: #979797;
+}
+
+.error-description {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 1.9em;
+    color: #979797;
+    border: none;
+}
+
+html {
+    font: normal 81.2%/1.65 "Open Sans", sans-serif;
+}
