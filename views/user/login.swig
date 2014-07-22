@@ -1,4 +1,10 @@
-<div class="container">
+{% extends "../layout.swig" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+
+<div class="container" style="margin-top:100px">
     <div class="row">
 
         <div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -9,11 +15,11 @@
                 <img class="profile-img" src="/images/login.png"/>
 
                 <form class="form-signin">
-                    <input name="username" type="text" class="form-control" style="width: 300px"
+                    <input name="username" type="text" class="form-control"
                            placeholder="Username" required autofocus>
                     <input name="password" type="password" class="form-control"
-                           style="width: 300px" placeholder="Password" required>
-                    <button class="btn btn-lg btn-primary btn-block"
+                           placeholder="Password" required>
+                    <button class="btn btn-lg btn-primary btn-block" style="border: none; color: #FFF !important"
                             type="submit">
                         Sign in
                     </button>
@@ -22,3 +28,5 @@
         </div>
     </div>
 </div>
+
+{% endblock body %}

@@ -14,8 +14,8 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta http-equiv="cleartype" content="on">
-    <link rel="stylesheet" type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
     <link rel="stylesheet" href="/linker/styles/error.css">
+    <link rel="stylesheet" type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
 </head>
 <body class="">
 <main role="main" id="main">

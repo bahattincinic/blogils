@@ -18,6 +18,12 @@ module.exports.bootstrap = function (cb) {
     avatar: 'https://secure.gravatar.com/avatar/c1184fefac22e49bbf59e3775ef6e9dd.png?size=400'
   }
 
+  config.seo = {
+    title: 'Bahattin Cinic',
+    keyword: 'Developer, Js, Python, PHP, Javascript',
+    description: 'Trust yourself! You can do it!'
+  }
+
   /* Blogger Social Accounts */
   config.accounts = [
     {

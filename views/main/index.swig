@@ -1,3 +1,8 @@
+{% extends "../layout.swig" %}
+
+{% block title %}{{ config.seo.title }}{% endblock title %}
+
+{% block body %}
 <span class="mobile btn-mobile-menu">
         <i class="icon icon-list btn-mobile-menu__icon"></i>
         <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
@@ -10,20 +15,20 @@
             <div class="panel-main__content">
 
 
-                <a href="/" title="link to homepage for <%= config.blogger.name %>">
-                    <img src="<%= config.blogger.avatar %>" width="80" alt="<%= config.blogger.name %> logo" class="panel-cover__logo logo"/>
+                <a href="/" title="link to homepage for {{ config.blogger.name }}">
+                    <img src="{{ config.blogger.avatar }}" width="80" alt="{{ config.blogger.name }} logo" class="panel-cover__logo logo"/>
                 </a>
 
                 <h1 class="panel-cover__title panel-title">
-                    <a href="/" title="link to homepage for <%= config.blogger.name %>">
-                        <%= config.blogger.name %>
+                    <a href="/" title="link to homepage for {{ config.blogger.name }}">
+                        {{ config.blogger.name }}
                     </a>
                 </h1>
                 <span class="panel-cover__subtitle panel-subtitle">
-                    <%= config.blogger.subTitle %>
+                    {{ config.blogger.subTitle }}
                 </span>
                 <hr class="panel-cover__divider"/>
-                <p class="panel-cover__description"><%= config.blogger.biography %></p>
+                <p class="panel-cover__description">{{ config.blogger.biography }}</p>
                 <hr class="panel-cover__divider panel-cover__divider--secondary"/>
 
                 <div class="navigation-wrapper">
@@ -40,16 +45,15 @@
 
                     <nav class="cover-navigation navigation--social">
                         <ul class="navigation">
-
-                            <% _.each(config.accounts, function (account) { %>
+                            {% for account in config.accounts  %}
                             <li class="navigation__item">
-                                <a href="<%= account.link %>" target="_blank"
-                                   title="<%= account.title %>">
-                                    <i class='icon icon-social-<%= account.title %>'></i>
-                                    <span class="label"><%= account.title %></span>
+                                <a href="{{ account.link }}" target="_blank"
+                                   title="{{ account.title }}">
+                                    <i class='icon icon-social-{{ account.title }}'></i>
+                                    <span class="label">{{ account.title }}</span>
                                 </a>
                             </li>
-                            <% }) %>
+                            {% endfor %}
 
                         </ul>
                     </nav>
@@ -71,22 +75,22 @@
 
         <div class="main-post-list">
             <ol class="post-list">
-                <% _.each(blogs, function (blog) { %>
+                {% for blog in blogs %}
                 <li>
                     <h2 class="post-list__post-title post-title"><a
-                            href="/post/<%= blog.slug %>/<%= blog.id %>/"
-                            title="<%= blog.name %>"><%= blog.title %></a></h2>
-                    <p class="excerpt"><%= blog.summary %></p>
+                            href="/post/{{ blog.slug }}/{{ blog.id }}/"
+                            title="<%= blog.name %>">{{ blog.title }}</a></h2>
+                    <p class="excerpt">{{ blog.summary }}</p>
                     <div class="post-list__meta">
-                        <time datetime="05 Jun 2014"
-                              class="post-list__meta--date date"><%= blog.createdAt %>
+                        <time datetime="{{ blog.createdAt }}"
+                              class="post-list__meta--date date">{{ blog.createdAt |date('d, M Do, h:m:s a') }}
                         </time>
                          •
-                        <%= blog.username %>
+                        {{ blog.username }}
                     </div>
                     <hr class="post-list__divider"/>
                 </li>
-                <% }) %>
+                {% endfor %}
             </ol>
         </div>
 
@@ -98,3 +102,4 @@
         </footer>
     </div>
 </div>
+{% endblock body %}
