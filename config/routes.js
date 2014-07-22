@@ -35,6 +35,11 @@ module.exports.routes = {
   '/': {
     controller: 'MainController',
     action: 'index'
+  },
+
+  '/post/:slug/:id': {
+    controller: 'MainController',
+    action: 'post'
   }
 
   /*

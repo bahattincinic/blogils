@@ -31,7 +31,7 @@
     <meta property="og:description" content="{{ config.seo.description }}">
 </head>
 
-<body class="home-template no-js">
+<body class="{% block bodyclass %}home-template no-js{% endblock bodyclass %}">
 {% block body %} {% endblock body %}
 
 <!--SCRIPTS-->

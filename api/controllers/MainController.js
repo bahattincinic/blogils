@@ -23,6 +23,17 @@ module.exports = {
     });
   },
 
+  post: function(req, res){
+    Blog.findOneById(req.param('id')).done(function(err, post) {
+      if (err) return next(err);
+      if(post){
+        res.view('main/post', {post: post});
+      }else{
+        res.notFound();
+      }
+    });
+  },
+
 
   /**
    * Overrides for the settings in `config/controllers.js`
