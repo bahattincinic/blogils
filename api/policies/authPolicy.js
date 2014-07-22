@@ -3,6 +3,6 @@ module.exports = function (req, res, next) {
         req.body.username = req.session.user.username;
         next();
     } else {
-        res.send("You Must Be Logged In", 403);
+        res.redirect('/user/login?redirect=' + req.originalUrl);
     }
 };

@@ -16,9 +16,12 @@
  */
 
 module.exports = {
-    
-  
 
+  index: function(req, res){
+    Blog.find().done(function(err, blog) {
+        res.view('blog/index', { blogs: blog});
+    });
+  },
 
   /**
    * Overrides for the settings in `config/controllers.js`
@@ -26,5 +29,5 @@ module.exports = {
    */
   _config: {}
 
-  
+
 };

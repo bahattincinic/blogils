@@ -40,6 +40,11 @@ module.exports.routes = {
   '/post/:slug/:id': {
     controller: 'MainController',
     action: 'post'
+  },
+
+  '/admin': {
+    controller: 'BlogController',
+    action: 'index'
   }
 
   /*

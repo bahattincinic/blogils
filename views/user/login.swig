@@ -19,6 +19,7 @@
                            placeholder="Username" required autofocus>
                     <input name="password" type="password" class="form-control"
                            placeholder="Password" required>
+                    <input type="hidden" name="redirect" value="{{ req.param('redirect') }}" />
                     <button class="btn btn-lg btn-primary btn-block" style="border: none; color: #FFF !important"
                             type="submit">
                         Sign in

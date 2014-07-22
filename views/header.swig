@@ -35,6 +35,11 @@
                                                             title="link to Dale-Anthony blog"
                                                             class="blog-button">Blog</a>
                             </li>
+                            {% if req.session.user %}
+                                <li class="navigation__item">
+                                    <a href="/admin" class="blog-button">Admin</a>
+                                </li>
+                            {% endif %}
                         </ul>
                     </nav>
 

@@ -19,7 +19,8 @@ module.exports.policies = {
   '*': true,
 
   BlogController: {
-  	'create': 'authPolicy'
+  	'create': 'authPolicy',
+    'index': 'authPolicy'
   },
 
   UserController: {

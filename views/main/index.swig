@@ -8,14 +8,13 @@
 <div class="content-wrapper">
     <div class="content-wrapper__inner">
 
-
         <div class="main-post-list">
             <ol class="post-list">
                 {% for blog in blogs %}
                 <li>
                     <h2 class="post-list__post-title post-title"><a
                             href="/post/{{ blog.slug }}/{{ blog.id }}/"
-                            title="<%= blog.name %>">{{ blog.title }}</a></h2>
+                            title="{{ blog.title }}">{{ blog.title }}</a></h2>
                     <p class="excerpt">{{ blog.summary }}</p>
                     <div class="post-list__meta">
                         <time datetime="{{ blog.createdAt }}"
@@ -29,7 +28,6 @@
                 {% endfor %}
             </ol>
         </div>
-
 
     {% include "../footer.swig" %}
     </div>

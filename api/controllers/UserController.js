@@ -26,10 +26,12 @@ module.exports = {
     if(!req.session.user){
         User.findOneByUsername(req.param('username'), function (err, user) {
             if(user && !err){
+                var redirect = req.param('redirect');
+                redirect = redirect != 'undefined' ? redirect : '/';
                 var match = bcrypt.compareSync(req.param('password'), user.password);
                 if(match){
                     req.session.user = user;
-                    res.redirect('/');
+                    res.redirect(redirect);
                 }else{
                     res.view('user/login');
                 }
