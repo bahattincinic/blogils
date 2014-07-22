@@ -18,7 +18,7 @@
 module.exports = {
 
   index: function(req, res){
-    Blog.find().done(function(err, blog) {
+    Blog.find().sort('createdAt desc').done(function(err, blog) {
         res.view('blog/index', { blogs: blog});
     });
   },
