@@ -10,20 +10,20 @@
             <div class="panel-main__content">
 
 
-                <a href="/" title="link to homepage for <%= config.bloggerName %>">
-                    <img src="<%= config.avatar %>" width="80" alt="<%= config.bloggerName %> logo" class="panel-cover__logo logo"/>
+                <a href="/" title="link to homepage for <%= config.blogger.name %>">
+                    <img src="<%= config.blogger.avatar %>" width="80" alt="<%= config.blogger.name %> logo" class="panel-cover__logo logo"/>
                 </a>
 
                 <h1 class="panel-cover__title panel-title">
-                    <a href="/" title="link to homepage for <%= config.bloggerName %>">
-                        <%= config.bloggerName %>
+                    <a href="/" title="link to homepage for <%= config.blogger.name %>">
+                        <%= config.blogger.name %>
                     </a>
                 </h1>
                 <span class="panel-cover__subtitle panel-subtitle">
-                    <%= config.subTitle %>
+                    <%= config.blogger.subTitle %>
                 </span>
                 <hr class="panel-cover__divider"/>
-                <p class="panel-cover__description"><%= config.biography %></p>
+                <p class="panel-cover__description"><%= config.blogger.biography %></p>
                 <hr class="panel-cover__divider panel-cover__divider--secondary"/>
 
                 <div class="navigation-wrapper">
@@ -41,42 +41,15 @@
                     <nav class="cover-navigation navigation--social">
                         <ul class="navigation">
 
-
-                            <!-- Twitter -->
+                            <% _.each(config.accounts, function (account) { %>
                             <li class="navigation__item">
-                                <a href="<%= config.twitter %>" target="_blank"
-                                   title="<%= config.bloggerName %> on Twitter">
-                                    <i class='icon icon-social-twitter'></i>
-                                    <span class="label">Twitter</span>
+                                <a href="<%= account.link %>" target="_blank"
+                                   title="<%= account.title %>">
+                                    <i class='icon icon-social-<%= account.title %>'></i>
+                                    <span class="label"><%= account.title %></span>
                                 </a>
                             </li>
-
-                            <!-- Facebook -->
-                            <li class="navigation__item">
-                                <a href="<%= config.facebook %>" target="_blank"
-                                   title="<%= config.bloggerName %> on Facebook">
-                                    <i class='icon icon-social-facebook'></i>
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-
-                            <!-- Github -->
-                            <li class="navigation__item">
-                                <a href="<%= config.github %>" target="_blank"
-                                   title="<%= config.bloggerName %> on Github">
-                                    <i class='icon icon-social-github'></i>
-                                    <span class="label">Github</span>
-                                </a>
-                            </li>
-
-                            <!-- Email -->
-                            <li class="navigation__item">
-                                <a href="mailto:<%= config.email %>"
-                                   title="Email <%= config.email %>">
-                                    <i class='icon icon-mail'></i>
-                                    <span class="label">Email</span>
-                                </a>
-                            </li>
+                            <% }) %>
 
                         </ul>
                     </nav>
