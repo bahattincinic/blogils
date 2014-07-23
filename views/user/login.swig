@@ -3,7 +3,7 @@
 {% block title %}Login{% endblock title %}
 
 {% block body %}
-
+<link rel="stylesheet" href="/linker/styles/login.css">
 <div class="container" style="margin-top:100px">
     <div class="row">
 

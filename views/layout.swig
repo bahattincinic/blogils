@@ -14,8 +14,7 @@
           content="black-translucent">
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/linker/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/linker/styles/login.css">
+    <link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/linker/styles/uno.css">
     <!--STYLES END-->
 
@@ -37,8 +36,8 @@
 <script src="/linker/js/socket.io.js"></script>
 <script src="/linker/js/sails.io.js"></script>
 <script src="/linker/js/app.js"></script>
-<script src="/linker/js/jquery.js"></script>
-<script type="text/javascript" src="/linker/js/bootstrap.min.js"></script>
+<script src="/linker/components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/linker/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/linker/js/main.js"></script>
 {% block head %}{% endblock head %}
 <!--SCRIPTS END-->

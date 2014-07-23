@@ -17,12 +17,6 @@
 
 module.exports = {
 
-  index: function(req, res){
-    Blog.find().sort('createdAt desc').done(function(err, blog) {
-        res.view('blog/index', { blogs: blog});
-    });
-  },
-
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to BlogController)
