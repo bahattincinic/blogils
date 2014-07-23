@@ -1,0 +1,21 @@
+{
+  "name": "Blogils",
+  "version": "1",
+  "homepage": "https://github.com/bahattincinic/blogils",
+  "authors": [
+    "Bahattin Cinic <bahattincinic@gmail.com>"
+  ],
+  "description": "Simple Blog Application",
+  "license": "MIT",
+  "dependencies": {
+    "ngReact": "0.0.2",
+    "bootstrap": "3.2.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
