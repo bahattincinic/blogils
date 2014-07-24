@@ -3,7 +3,7 @@
 
 Simple Blog Application uses Sails.js, Angular Js, React Js and MongoDb
 
-[![Dependency Status](https://david-dm.org/bahattincinic/blogils.svg)](https://david-dm.org/bahattincinic/blogils)
+[![Build Status](https://travis-ci.org/bahattincinic/blogils.svg?branch=master)](https://travis-ci.org/bahattincinic/blogils) [![Dependency Status](https://david-dm.org/bahattincinic/blogils.svg)](https://david-dm.org/bahattincinic/blogils)
 
 Screenshots
 ------
