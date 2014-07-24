@@ -87,3 +87,11 @@ edit to file in the `config/bootstrap.js`
 Run
 -------------
     sails lift
+
+
+Blog URls
+-------------
+1. /admin/
+2. /user/login/
+3. /user/logout/
+4. /blog/<slug>/<id>/
