@@ -23,7 +23,7 @@ post-template tag-front-end tag-styleguide tag-bootstrap no-js
             </header>
 
             <section class="post tag-front-end tag-styleguide tag-bootstrap">
-            <p> {{ post.description }} </p>
+            <p>{% autoescape false %} {{ post.description }}{% endautoescape %}</p>
             </section>
 
           </article>

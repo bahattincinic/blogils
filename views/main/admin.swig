@@ -3,12 +3,17 @@
 {% block title %} Admin {% endblock title %}
 
 {% block head %}
+<link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <script src="/linker/components/angular/angular.js"></script>
+<script src="/linker/components/angular-resource/angular-resource.js"></script>
 <script src="/linker/components/angular-route/angular-route.js"></script>
 <script src="/linker/components/underscore/underscore-min.js"></script>
 <script src="/linker/components/react/react.js"></script>
 <script src="/linker/components/react/JSXTransformer.js"></script>
 <script src="/linker/components/ngReact/ngReact.min.js"></script>
+<script src='/linker/components/textAngular/dist/textAngular-sanitize.min.js'></script>
+<script src='/linker/components/textAngular/dist/textAngular.min.js'></script>
 <script src="/linker/js/apps/controllers.js"></script>
 <script type="text/jsx" src="/linker/js/apps/dom.js"></script>
 <script src="/linker/js/apps/routes.js"></script>

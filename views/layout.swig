@@ -14,7 +14,6 @@
           content="black-translucent">
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/linker/styles/uno.css">
     <!--STYLES END-->
 

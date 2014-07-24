@@ -2,6 +2,10 @@
 
 {% block title %}Login{% endblock title %}
 
+{% block head %}
+<link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
+{% endblock head %}
+
 {% block body %}
 <link rel="stylesheet" href="/linker/styles/login.css">
 <div class="container" style="margin-top:100px">
@@ -16,9 +20,9 @@
 
                 <form class="form-signin">
                     <input name="username" type="text" class="form-control"
-                           placeholder="Username" required autofocus>
+                           placeholder="Username" required autofocus style="width: 298px;">
                     <input name="password" type="password" class="form-control"
-                           placeholder="Password" required>
+                           placeholder="Password" required style="width: 298px;">
                     <input type="hidden" name="redirect" value="{{ req.param('redirect') }}" />
                     <button class="btn btn-lg btn-primary btn-block" style="border: none; color: #FFF !important"
                             type="submit">
