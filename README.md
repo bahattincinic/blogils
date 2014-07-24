@@ -30,7 +30,7 @@ Installation
 5. bower install
 6. change mongoDb settings (`config/session.js`, `config/adapter.js`)
 
-To personalize your theme
+Personalize your theme
 -------------
 edit to file in the `config/bootstrap.js`
     
