@@ -1,0 +1,40 @@
+<div class="row" ng-controller="blogController">
+<form class="form-horizontal" ng-submit="save_blog()" method="get">
+  <fieldset>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="title">Title</label>
+    <div class="col-md-4">
+    <input id="title" name="title" style="width: 100%;" ng-model="form.title" type="text" placeholder="title" class="form-control input-md" required>
+
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="summary">Summary</label>
+    <div class="col-md-4">
+      <textarea required class="form-control" id="summary" ng-model="form.summary" name="summary"></textarea>
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="description">Description</label>
+    <div class="col-md-4">
+      <textarea required class="form-control" id="description" ng-model="form.description" name="description"></textarea>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="singlebutton"></label>
+    <div class="col-md-4">
+       <input type="submit" class="btn btn-primary" value="Save" />
+    </div>
+  </div>
+
+  </fieldset>
+</form>
+</div>

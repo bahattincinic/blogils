@@ -30,8 +30,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/admin/">Blogs</a></li>
-          <li><a href="#">Add Blog</a></li>
+          <li class="active"><a href="#/">Blogs</a></li>
+          <li><a href="#/add-blog">Add Blog</a></li>
           <li><a href="/user/logout">Logout</a></li>
         </ul>
       </div>
