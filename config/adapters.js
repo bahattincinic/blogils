@@ -16,14 +16,5 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified
   // in a model definition, 'default' will be used.
-  'default': 'mongo',
 
-  mongo: {
-    module   : 'sails-mongo',
-    host     : 'localhost',
-    port     : 27017,
-    user     : 'bloguser',
-    password : '1',
-    database : 'blogils',
-  }
 };
