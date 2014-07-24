@@ -18,7 +18,7 @@ theme by [Dale-Anthony](https://github.com/daleanthony/uno)
 Requirements
 -------------
 1. Node Js
-2. Bower (`pip install bower`)
+2. Bower (`pip install -g bower`)
 3. Sails (`npm install -g sails`)
 
 Installation
