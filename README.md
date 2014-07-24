@@ -28,7 +28,39 @@ Installation
 3. npm install
 4. cd assets/linker/
 5. bower install
-6. change mongoDb settings (`config/session.js`, `config/adapter.js`)
+6. touch config/local.js
+
+Edit mongoDb settings (`config/local.js`)
+-------------
+
+    module.exports = {
+        port: process.env.PORT || 1337,
+        environment: process.env.NODE_ENV || 'development',
+        adapters: {
+          'default': 'mongo',
+            mongo: {
+             module   : 'sails-mongo',
+             host     : 'localhost',
+             port     : 27017,
+             user     : '<user>',
+             password : '<password>',
+             database : '<db>',
+           }
+        },
+        session: {
+          adapter: 'mongo',
+          host: 'localhost',
+          port: 27017,
+          db: '<db>',
+          collection: 'sessions',
+          username: '<user>',
+          password: '<password>',
+          auto_reconnect: false,
+          ssl: false,
+          stringify: true
+        }
+    
+    };
 
 Personalize your theme
 -------------
