@@ -37,8 +37,19 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#/">Blogs</a></li>
           <li><a href="#/add-blog">Add Blog</a></li>
-          <li><a href="/user/logout">Logout</a></li>
         </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+              {{ user.username }} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/user/logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+
       </div>
     </div>
 </nav>

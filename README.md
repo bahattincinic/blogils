@@ -72,13 +72,18 @@ Edit mongoDb settings (`config/local.js`)
           ssl: false,
           stringify: true
         }
-    
+
     };
+
+Run the following commands in create user
+-------------
+    sails console
+    sails> User.create({username:"<username>", email:"<email>", password:"<password>"}).exec(function(err, user){ console.log(user); });
 
 Personalize your theme
 -------------
 edit to file in the `config/bootstrap.js`
-    
+
     module.exports.bootstrap = function (cb) {
       /* Blogger Settings */
       config.blogger = {
@@ -87,23 +92,23 @@ edit to file in the `config/bootstrap.js`
         biography: 'Trust yourself! You can do it!',
         avatar: 'https://secure.gravatar.com/avatar/c1184fefac22e49bbf59e3775ef6e9dd.png?size=400'
       }
-    
+
       /* Seo Settings */
       config.seo = {
         title: 'Bahattin Cinic',
         keyword: 'Developer, Js, Python, PHP, Javascript',
         description: 'Trust yourself! You can do it!'
       }
-    
+
       /* Disqus Settings */
       config.comment = {
         is_active: true,
         disqus_shortname: 'bahattininic'
       }
-    
+
       /* AddThis Share */
       config.share = true;
-    
+
       /* Blogger Social Accounts */
       config.accounts = [
         {
@@ -123,7 +128,7 @@ edit to file in the `config/bootstrap.js`
           link: 'mailto:bahattincinic@gmail.com'
         }
       ];
-    
+
       // It's very important to trigger this callack method when you are finished
       // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
       cb();

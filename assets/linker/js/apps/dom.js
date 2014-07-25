@@ -13,8 +13,9 @@ window.Repeater = React.createClass({
       return (
         <tr>
           <td>{row['title']}</td>
-          <td>{row['createdAt']}</td>
-          <td><a href={'/post/' + row['slug'] + '/' + row['id']}>Post</a></td>
+          <td className="webrow">{row['username']}</td>
+          <td className="webrow">{row['createdAt']}</td>
+          <td className="webrow"><a href={'/post/' + row['slug'] + '/' + row['id']}>Post</a></td>
           <td><a href={'#edit/' + row['id']}>Edit</a></td>
           <td><a href="javascript:void(0)" onClick={clickHandler}>Delete</a></td>
         </tr>

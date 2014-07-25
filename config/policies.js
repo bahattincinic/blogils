@@ -26,6 +26,10 @@ module.exports.policies = {
   UserController: {
   	'create': 'authPolicy',
     'logout': 'authPolicy'
+  },
+
+  MainController: {
+    'admin': 'authPolicy'
   }
 
   /*

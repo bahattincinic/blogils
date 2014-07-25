@@ -34,6 +34,10 @@ module.exports = {
     });
   },
 
+  admin: function(req, res){
+    res.view('main/admin', {user: req.session.user})
+  },
+
 
   /**
    * Overrides for the settings in `config/controllers.js`

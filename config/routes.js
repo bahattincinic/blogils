@@ -43,7 +43,8 @@ module.exports.routes = {
   },
 
   '/admin': {
-    view: 'main/admin'
+    controller: 'MainController',
+    action: 'admin'
   }
 
   /*
