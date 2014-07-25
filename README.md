@@ -62,6 +62,18 @@ Edit mongoDb settings (`config/local.js`)
     
     };
 
+Install mongodb:
+-------------
+
+    sudo apt-get install mongodb
+    # or on mac
+    sudo brew install mongodb
+
+Start mongodb:
+-------------
+
+    mongod
+
 Personalize your theme
 -------------
 edit to file in the `config/bootstrap.js`
@@ -116,7 +128,7 @@ edit to file in the `config/bootstrap.js`
       cb();
     };
 
-Run
+run the following commands:
 -------------
     sails lift
 
