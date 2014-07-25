@@ -20,6 +20,7 @@ Requirements
 1. Node Js
 2. Bower (`pip install -g bower`)
 3. Sails (`npm install -g sails`)
+4. mongodb
 
 Installation
 -------------
@@ -29,6 +30,18 @@ Installation
 4. cd assets/linker/
 5. bower install
 6. touch config/local.js
+
+Install mongodb:
+-------------
+
+    sudo apt-get install mongodb
+    # or on mac
+    sudo brew install mongodb
+
+Start mongodb:
+-------------
+
+    mongod
 
 Edit mongoDb settings (`config/local.js`)
 -------------
@@ -61,18 +74,6 @@ Edit mongoDb settings (`config/local.js`)
         }
     
     };
-
-Install mongodb:
--------------
-
-    sudo apt-get install mongodb
-    # or on mac
-    sudo brew install mongodb
-
-Start mongodb:
--------------
-
-    mongod
 
 Personalize your theme
 -------------
