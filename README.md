@@ -27,9 +27,8 @@ Installation
 1. git clone https://github.com/bahattincinic/blogils blogils
 2. cd blogils
 3. npm install
-4. cd assets/linker/
-5. bower install
-6. touch config/local.js
+4. bower install
+5. touch config/local.js
 
 Install mongodb:
 -------------
