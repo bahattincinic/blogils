@@ -6,6 +6,10 @@
 post-template tag-front-end tag-styleguide tag-bootstrap no-js
 {% endblock bodyclass %}
 
+{% block head %}
+    <link rel="alternate" type="application/rss+xml" title="{{ post.title }}" href="{{ config.domain }}post/{{ post.slug }}/{{ post.id }}/feed" />
+{% endblock head %}
+
 {% block body %}
 {% include "../header.swig" %}
 

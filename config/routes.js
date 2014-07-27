@@ -37,6 +37,11 @@ module.exports.routes = {
     action: 'index'
   },
 
+  '/feed': {
+    controller: 'RssController',
+    action: 'index'
+  },
+
   '/post/:slug/:id': {
     controller: 'MainController',
     action: 'post'
@@ -45,7 +50,12 @@ module.exports.routes = {
   '/admin': {
     controller: 'MainController',
     action: 'admin'
-  }
+  },
+
+  '/post/:slug/:id/feed': {
+    controller: 'RssController',
+    action: 'post'
+  },
 
   /*
   // But what if you want your home page to display

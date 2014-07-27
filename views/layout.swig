@@ -12,6 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style"
           content="black-translucent">
+    <link rel="alternate" type="application/rss+xml" title="{{ config.seo.title }}" href="{{ config.domain }}feed/" />
 
     <!--STYLES-->
     <link rel="stylesheet" href="/linker/styles/uno.css">
@@ -26,6 +27,8 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ config.blogger.name }}">
     <meta property="og:description" content="{{ config.seo.description }}">
+
+    {% block head %} {% endblock head %}
 </head>
 
 <body class="{% block bodyclass %}home-template no-js{% endblock bodyclass %}">
@@ -38,7 +41,7 @@
 <script src="/linker/components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/linker/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/linker/js/main.js"></script>
-{% block head %}{% endblock head %}
+{% block footer %}{% endblock footer %}
 <!--SCRIPTS END-->
 </body>
 </html>

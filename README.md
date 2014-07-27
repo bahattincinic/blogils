@@ -92,9 +92,12 @@ edit to file in the `config/bootstrap.js`
       config.blogger = {
         name: 'Bahattin Cinic',
         subTitle: 'Developer',
+        email: 'bahattincinic@gmail.com',
         biography: 'Trust yourself! You can do it!',
         avatar: 'https://secure.gravatar.com/avatar/c1184fefac22e49bbf59e3775ef6e9dd.png?size=400'
       }
+
+      config.domain = 'http://localhost:1337/'
 
       /* Seo Settings */
       config.seo = {

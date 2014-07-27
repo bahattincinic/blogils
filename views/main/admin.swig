@@ -2,7 +2,7 @@
 
 {% block title %} Admin {% endblock title %}
 
-{% block head %}
+{% block footer %}
 <link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <script src="/linker/components/angular/angular.js"></script>
@@ -17,7 +17,7 @@
 <script src="/linker/js/apps/controllers.js"></script>
 <script type="text/jsx" src="/linker/js/apps/dom.js"></script>
 <script src="/linker/js/apps/routes.js"></script>
-{% endblock head %}
+{% endblock footer %}
 
 {% block body %}
 <div class="container-fluid" style="margin-top:65px" ng-app="mainApp">

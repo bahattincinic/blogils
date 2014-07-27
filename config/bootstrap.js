@@ -14,6 +14,7 @@ module.exports.bootstrap = function (cb) {
   config.blogger = {
     name: 'Bahattin Cinic',
     subTitle: 'Developer',
+    email: 'bahattincinic@gmail.com',
     biography: 'Trust yourself! You can do it!',
     avatar: 'https://secure.gravatar.com/avatar/c1184fefac22e49bbf59e3775ef6e9dd.png?size=400'
   }
@@ -24,6 +25,8 @@ module.exports.bootstrap = function (cb) {
     keyword: 'Developer, Js, Python, PHP, Javascript',
     description: 'Trust yourself! You can do it!'
   }
+
+  config.domain = process.env.domain || 'http://localhost:1337/';
 
   /* Disqus Settings */
   config.comment = {
