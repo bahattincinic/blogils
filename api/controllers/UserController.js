@@ -20,33 +20,35 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   /**
-   *User Login
+   * User Login
   */
   login: function(req, res){
-    if(!req.session.user){
-        User.findOneByUsername(req.param('username'), function (err, user) {
-            if(user && !err){
-                var redirect = req.param('redirect');
-                redirect = redirect != 'undefined' ? redirect : '/';
-                var match = bcrypt.compareSync(req.param('password'), user.password);
-                if(match){
-                    req.session.user = user;
-                    res.redirect(redirect);
-                }else{
-                    res.view('user/login');
-                }
-            }else {
+    var redirect = req.param('redirect');
+    redirect = redirect != 'undefined' ? redirect : '/';
+    User.findOneByUsername(req.param('username'), function (err, user) {
+        if(user && !err){
+            var match = bcrypt.compareSync(req.param('password'), user.password);
+            if(match){
+                req.session.user = user;
+                res.redirect(redirect);
+            }else{
                 res.view('user/login');
             }
-        });
-    }else{
-        res.redirect('/');
-    }
+        }else {
+            res.view('user/login');
+        }
+    });
   },
 
+  /**
+   * User Register
+  */
+  register: function(req, res){
+    res.view('user/register')
+  },
 
   /**
-   *User Logout
+   * User Logout
   */
   logout: function(req, res){
     User.findOne(req.session.user.id, function (err, user) {

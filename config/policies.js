@@ -24,8 +24,13 @@ module.exports.policies = {
   },
 
   UserController: {
-  	'create': 'authPolicy',
-    'logout': 'authPolicy'
+  	'create': 'registerPolicy',
+    'register': 'registerPolicy',
+    'update': 'authPolicy',
+    'destroy': 'authPolicy',
+    'logout': 'authPolicy',
+    'login': 'loginPolicy',
+    'find': 'authPolicy'
   },
 
   MainController: {

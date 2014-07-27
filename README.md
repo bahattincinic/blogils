@@ -78,7 +78,7 @@ Edit mongoDb settings (`config/local.js`)
 
     };
 
-Run the following commands in create user
+Manually create user (/user/register will be redirected)
 -------------
     sails console
     sails> User.create({username:"<username>", email:"<email>", password:"<password>"}).exec(function(err, user){ console.log(user); });

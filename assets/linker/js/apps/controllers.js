@@ -54,3 +54,16 @@ angular.module('mainApp').controller('blogController', function($scope, $resourc
   }
 
 });
+
+
+angular.module('mainApp').controller('userController', function($scope, $resource){
+  $scope.form = {username: '', email: '', password: ''};
+  var User = $resource('/user/:userId', {userId:'@id'});
+
+  $scope.create = function(){
+    var instance = new User($scope.form);
+    instance.$save(function(){
+        window.location = '/user/login/';
+    });
+  }
+});
