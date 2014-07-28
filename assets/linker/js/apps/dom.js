@@ -7,7 +7,7 @@ window.Repeater = React.createClass({
     var rows = _.map(scope.data, function(row){
       var clickHandler = scope.$apply.bind(
           scope,
-          scope.delete_blog.bind(null, row)
+          scope.delete.bind(null, row)
         );
 
       return (

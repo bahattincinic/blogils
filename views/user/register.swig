@@ -14,7 +14,7 @@
             <div class="account-wall">
                 <img class="profile-img" src="/images/login.png"/>
 
-                <form class="form-signin" ng-submit="create()">
+                <form class="form-signin" ng-submit="save()">
                     <input name="username" type="text" class="form-control"
                            placeholder="Username" required autofocus style="width: 298px; margin-bottom: 3px" ng-model="form.username">
                     <input name="email" type="email" class="form-control"

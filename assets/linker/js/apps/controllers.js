@@ -8,62 +8,59 @@ angular.module('mainApp').config(['$interpolateProvider', function($interpolateP
     $interpolateProvider.endSymbol('}]}');
 }]);
 
-angular.module('mainApp').controller('blogController', function($scope, $resource, $location, $routeParams){
-  /* create and update form */
-  $scope.form = {title: '', summary: '', description: ''};
-  /* blog instance */
-  var Blog = $resource('/blog/:blogId', {blogId:'@id'}, {
-      'update': { method:'PUT' }
-  });
+angular.module('mainApp').controller('BaseAdminController', function($scope, $resource, $location, $routeParams){
 
-  /* get blogs */
-  $scope.get_all_blogs = function(){
-    if ($routeParams.blogId){
-        Blog.get({blogId: $routeParams.blogId}, function(data){
+  $scope.get = function(){
+    if ($routeParams.Id){
+        $scope.resource.get({Id: $routeParams.Id}, function(data){
             $scope.form = data;
         });
     }else{
-        Blog.query(function(data){
+        $scope.resource.query(function(data){
             $scope.data = data;
         });
     }
   }
-  $scope.get_all_blogs();
+  $scope.get();
 
-  /* create/updats blog */
-  $scope.save_blog = function(){
-    if($routeParams.blogId){
+  $scope.save = function(){
+    if($routeParams.Id){
       /* update */
-      Blog.update({blogId: $routeParams.blogId}, $scope.form, function(){
-        $location.path('/');
+      $scope.resource.update({Id: $routeParams.Id}, $scope.form, function(){
+        alertify.success("Updated");
       });
     }else{
       /* create */
-      var instance = new Blog($scope.form);
+      var instance = new $scope.resource($scope.form);
       instance.$save(function(){
-        $location.path('/');
+        $location.path($scope.redirect_url);
       });
     }
   }
 
-  /* delete blog */
-  $scope.delete_blog = function(blog){
-    Blog.delete({blogId: blog.id}, function(){
-        $scope.get_all_blogs();
+  $scope.delete = function(instance){
+    $scope.resource.delete({Id: instance.id}, function(){
+        $scope.get();
+        alertify.success("Deleted");
     })
   }
 
+})
+
+
+angular.module('mainApp').controller('blogController', function($scope, $resource, $location, $routeParams, $controller){
+  $scope.form = {title: '', summary: '', description: ''};
+  $scope.resource = $resource('/blog/:Id', {Id:'@id'}, { 'update': { method:'PUT' }});
+  $scope.redirect_url = '/';
+
+  $controller('BaseAdminController', {$scope: $scope});
 });
 
 
-angular.module('mainApp').controller('userController', function($scope, $resource){
+angular.module('mainApp').controller('userController', function($scope, $resource, $location, $routeParams, $controller){
   $scope.form = {username: '', email: '', password: ''};
-  var User = $resource('/user/:userId', {userId:'@id'});
+  $scope.resource = $resource('/user/:Id', {Id:'@id'}, { 'update': { method:'PUT' }});
+  $scope.redirect_url = '/';
 
-  $scope.create = function(){
-    var instance = new User($scope.form);
-    instance.$save(function(){
-        window.location = '/user/login/';
-    });
-  }
+  $controller('BaseAdminController', {$scope: $scope});
 });
