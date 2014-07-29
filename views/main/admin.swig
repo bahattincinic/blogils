@@ -4,6 +4,7 @@
 
 {% block footer %}
 <link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/linker/styles/admin.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="/linker/components/alertify.js/themes/alertify.core.css">
 <link rel="stylesheet" href="/linker/components/alertify.js/themes/alertify.default.css">

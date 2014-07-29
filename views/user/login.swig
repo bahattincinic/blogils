@@ -4,11 +4,11 @@
 
 {% block head %}
 <link rel="stylesheet" href="/linker/components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/linker/styles/login.css">
 {% endblock head %}
 
 {% block body %}
-<link rel="stylesheet" href="/linker/styles/login.css">
-<div class="container" style="margin-top:100px">
+<div class="container-fluid" style="margin-top:100px">
     <div class="row">
 
         <div class="col-sm-6 col-md-4 col-md-offset-4">
