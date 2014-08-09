@@ -1,28 +1,8 @@
 <div class="container">
-<div class="row" ng-controller="userController">
-<form class="form-horizontal" role="form" ng-submit="save()" method="get">
-  <!-- Text input-->
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input id="username" name="username" style="width: 100%;" ng-model="form.username" type="text" placeholder="username" class="form-control input-md" required>
+
+  <!-- User Form -->
+  <div class="row" ng-controller="userController">
+    <ng-form data-form="form" data-submit="save"></ng-form>
   </div>
 
-  <div class="form-group">
-    <label for="email">E-mail</label>
-    <input id="email" name="email" style="width: 100%;" ng-model="form.email" type="email" placeholder="email" class="form-control input-md" required>
-  </div>
-
-  <div class="form-group">
-    <label for="password">New Password (optional)</label>
-    <input id="password" name="password" style="width: 100%;" ng-model="form.password" type="password" placeholder="password" class="form-control input-md" />
-  </div>
-
-  <!-- Button -->
-  <div class="form-group">
-    <label for="singlebutton"></label>
-       <input type="submit" class="btn btn-primary" value="Save" />
-  </div>
-
-</form>
-</div>
 </div>

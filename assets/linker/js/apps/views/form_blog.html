@@ -1,0 +1,15 @@
+<script id="template/form/fields/editor.html" type="text/ng-template">
+  <div class="form-group">
+    <label ng-bind="field.title"></label>
+    <text-angular ng-model="field.value"></text-angular>
+  </div>
+</script>
+
+<div class="container">
+
+  <!-- Blog Form -->
+  <div class="row" ng-controller="blogController">
+    <ng-form data-form="form" data-submit="save"></ng-form>
+  </div>
+
+</div>

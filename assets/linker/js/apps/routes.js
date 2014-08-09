@@ -5,10 +5,10 @@ angular.module('mainApp').config(['$routeProvider', function($routeProvider) {
         templateUrl: '/linker/js/apps/views/list_blog.html',
         action: 'blogController'
     }).when('/add-blog', {
-        templateUrl: '/linker/js/apps/views/blog_form.html',
+        templateUrl: '/linker/js/apps/views/form_blog.html',
         action: 'blogController'
     }).when('/edit/:Id', {
-        templateUrl: '/linker/js/apps/views/blog_form.html',
+        templateUrl: '/linker/js/apps/views/form_blog.html',
         action: 'blogController'
     }).when('/update-profile/:Id', {
         templateUrl: '/linker/js/apps/views/profile_form.html',

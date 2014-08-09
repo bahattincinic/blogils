@@ -13,7 +13,8 @@
     "angular-route": "~1.2.20",
     "angular-resource": "1.2.20",
     "textAngular": "~1.2.1",
-    "alertify.js": "0.3.11"
+    "alertify.js": "0.3.11",
+    "angularjs-formbuilder": "0.1"
   },
   "ignore": [
     "**/.*",
